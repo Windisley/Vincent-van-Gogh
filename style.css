@@ -1,0 +1,607 @@
+:root {
+  --color-dark-blue: #1a1a40; /* Mais próximo do azul da imagem */
+  --color-accent-yellow: #ffd700; /* Gold */
+  --color-text-light: #e0e0e0;
+  --gradient-start: #1a1a40; /* Dark blue */
+  --gradient-end: #1a1a40; /* Dark blue */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Esconde barras de rolagem indesejadas */
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--color-text-light);
+  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-dark-blue); /* Cor base */
+  position: relative; /* Para o gradiente absoluto */
+}
+
+/* Gradiente de fundo */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.4) 0%, transparent 40%);
+  pointer-events: none; /* Permite cliques através do gradiente */
+  z-index: -1;
+}
+
+.page-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding: 40px 80px; /* Mantém o padding interno para o conteúdo */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  margin-bottom: 50px; /* Espaço abaixo do header */
+}
+
+.logo img {
+  filter: invert(1) sepia(1) saturate(5) hue-rotate(100deg) brightness(1.5); /* Makes placeholder yellow */
+  width: 30px; /* Ajuste o tamanho do logo */
+  height: 30px;
+}
+
+.nav-links {
+  flex-grow: 1; /* Permite que os links ocupem o espaço central */
+  text-align: center;
+}
+
+.nav-links a {
+  color: var(--color-text-light);
+  text-decoration: none;
+  margin: 0 30px; /* Espaçamento entre os links */
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--color-accent-yellow);
+}
+
+.contact-button a {
+  color: var(--color-accent-yellow);
+  text-decoration: none;
+  border: 1px solid var(--color-accent-yellow);
+  border-radius: 50px;
+  padding: 10px 30px; /* Ajuste o padding do botão */
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-button a:hover {
+  background-color: var(--color-accent-yellow);
+  color: var(--color-dark-blue);
+}
+
+/* Social Links */
+.social-links {
+  position: absolute;
+  left: 80px; /* Alinhado com o padding da page-wrapper */
+  top: 50%; /* Centralizado verticalmente */
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+}
+
+.social-links a {
+  color: var(--color-text-light);
+  text-decoration: none;
+  margin: 20px 0; /* Espaçamento entre os links sociais */
+  font-size: 0.8rem;
+  transform: rotate(-90deg);
+  transform-origin: left center;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--color-accent-yellow);
+}
+
+/* Main Content Area */
+.main-content {
+  position: relative;
+  flex-grow: 1; /* Ocupa o espaço restante */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+  align-items: flex-start; /* Alinha o conteúdo ao topo */
+  padding-top: 50px; /* Espaço do topo para o conteúdo principal */
+}
+
+.main-title {
+  position: absolute;
+  top: 0; /* Ajustado para o topo da main-content */
+  left: 100px; /* Ajustado para melhor composição com a imagem à esquerda */
+  font-family: "Playfair Display", serif;
+  font-size: 12vw; /* Tamanho da fonte muito grande */
+  line-height: 0.8;
+  color: var(--color-accent-yellow);
+  text-transform: uppercase;
+  z-index: 2;
+  pointer-events: none;
+  white-space: nowrap; /* Evita quebra de linha */
+}
+
+.main-title .dot {
+  color: var(--color-accent-yellow);
+  font-size: 0.8em;
+  vertical-align: super;
+}
+
+.main-description {
+  position: absolute;
+  top: 280px; /* Posicionado embaixo do título VINCENT VAN GOGH */
+  left: 100px; /* Alinhado com o main-title */
+  max-width: 350px; /* Aumentado para mais texto */
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--color-text-light);
+  z-index: 2;
+}
+
+.central-image-wrapper {
+  position: absolute;
+  top: 0; /* Alinhado com o topo do main-title */
+  left: 50%; /* Posicionado ao lado do main-title */
+  transform: translateX(-50%); /* Ajuste para centralização horizontal */
+  width: 25vw; /* Tamanho responsivo */
+  max-width: 400px; /* Tamanho máximo */
+  height: 35vw; /* Altura responsiva */
+  max-height: 550px; /* Altura máxima */
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Alinha a imagem na parte inferior do wrapper */
+}
+
+.central-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  /* Ajuste para a imagem dentro do arco */
+  clip-path: ellipse(50% 50% at 50% 50%); /* Começa com um círculo/elipse */
+  /* A forma do arco será feita com o pseudo-elemento */
+}
+
+.image-arch-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--color-accent-yellow);
+  border-radius: 50% / 100% 100% 0 0; /* Cria o formato de arco */
+  border-bottom: none; /* Remove a borda inferior */
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+/* Right Section (Sunflowers) */
+.right-section {
+  position: absolute;
+  bottom: 50px; /* Movido para a parte inferior */
+  right: 80px; /* Mantido no canto direito */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 2;
+}
+
+.right-image-container {
+  width: 15vw; /* Tamanho responsivo */
+  max-width: 250px; /* Tamanho máximo */
+  height: 15vw; /* Altura responsiva */
+  max-height: 250px; /* Altura máxima */
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.right-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.right-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5vw; /* Tamanho da fonte responsivo */
+  max-width: 250px;
+  text-align: right;
+  line-height: 1.3;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+}
+
+/* Bottom Text Sections (repurposed from previous bottom-text-right) */
+.bottom-text-right {
+  position: absolute;
+  bottom: 0; /* Alinhado com a parte inferior da main-content */
+  left: 50%; /* Posicionado em relação ao centro */
+  transform: translateX(-50%); /* Centraliza em relação ao 'left' */
+  max-width: 300px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--color-text-light);
+  text-align: left; /* Alinhamento à esquerda como na imagem */
+  z-index: 2;
+}
+
+/* Circular Text */
+.circular-text {
+  position: absolute;
+  bottom: 150px; /* Ajustado para não sobrepor a seção dos girassóis */
+  right: 80px; /* Ajustado para a posição na imagem */
+  width: 120px;
+  height: 120px;
+  z-index: 3;
+}
+
+.circular-text svg {
+  width: 100%;
+  height: 100%;
+}
+
+.circular-text text {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Animações */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header,
+.social-links a,
+.main-title,
+.main-description /* Adicionado para animação */,
+.central-image-wrapper,
+.right-section,
+.bottom-text-right,
+.circular-text {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+body.page-loaded .header {
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+body.page-loaded .social-links a:nth-child(1) {
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.4s;
+}
+body.page-loaded .social-links a:nth-child(2) {
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.5s;
+}
+body.page-loaded .social-links a:nth-child(3) {
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.6s;
+}
+
+body.page-loaded .main-title {
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.7s;
+}
+
+body.page-loaded .main-description {
+  /* Adicionado para animação */
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.8s;
+}
+
+body.page-loaded .central-image-wrapper {
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.9s;
+}
+
+body.page-loaded .right-section {
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 1.1s;
+}
+
+body.page-loaded .bottom-text-right {
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 1.5s;
+}
+
+body.page-loaded .circular-text {
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 1.7s;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1440px) {
+  .page-wrapper {
+    width: 100vw;
+    height: 100vh;
+    padding: 30px 60px;
+  }
+  .header {
+    margin-bottom: 40px;
+  }
+  .social-links {
+    left: 60px;
+  }
+  .main-title {
+    left: 80px;
+    font-size: 10vw;
+  }
+  .main-description {
+    top: 250px; /* Posicionado embaixo do título em telas menores */
+    left: 80px;
+  }
+  .central-image-wrapper {
+    right: 15%; /* Mantém o posicionamento na direita */
+    left: auto; /* Remove left para usar right */
+    transform: translateY(-50%); /* Apenas centraliza verticalmente */
+    width: 28vw;
+    height: 38vw;
+  }
+  .right-section {
+    bottom: 40px;
+    right: 60px;
+  }
+  .right-image-container {
+    width: 18vw;
+    height: 18vw;
+  }
+  .right-text {
+    font-size: 1.8vw;
+  }
+  .circular-text {
+    bottom: 120px;
+    right: 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .page-wrapper {
+    width: 100vw;
+    height: 100vh;
+    padding: 20px 40px;
+  }
+  .header {
+    margin-bottom: 30px;
+  }
+  .nav-links a {
+    margin: 0 20px;
+  }
+  .social-links {
+    left: 40px;
+  }
+  .main-title {
+    left: 60px;
+    font-size: 12vw;
+  }
+  .main-description {
+    top: 270px; /* Posicionado embaixo do título em tablets */
+    left: 60px;
+    max-width: 300px;
+  }
+  .central-image-wrapper {
+    right: 15%; /* Mantém o posicionamento na direita */
+    left: auto;
+    transform: translateY(-50%);
+    width: 35vw;
+    height: 45vw;
+    max-width: 300px;
+    max-height: 400px;
+  }
+  .right-section {
+    bottom: 30px;
+    right: 40px;
+  }
+  .right-image-container {
+    width: 20vw;
+    height: 20vw;
+    max-width: 180px;
+    max-height: 180px;
+  }
+  .right-text {
+    font-size: 2vw;
+  }
+  .bottom-text-right {
+    max-width: 250px;
+  }
+  .circular-text {
+    bottom: 100px;
+    right: 40px;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    background: var(--color-dark-blue); /* Remove radial gradient on small screens */
+  }
+  body::before {
+    display: none;
+  }
+  .page-wrapper {
+    width: 100vw;
+    height: 100vh;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 0;
+    margin-bottom: 20px;
+  }
+  .nav-links {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .nav-links a {
+    margin: 5px 10px;
+    font-size: 0.8rem;
+  }
+  .contact-button {
+    margin-top: 15px;
+  }
+
+  .social-links {
+    display: none; /* Hide vertical social links on small screens */
+  }
+
+  .main-content {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    height: auto;
+    width: 100%;
+  }
+
+  .main-title {
+    position: relative;
+    top: auto;
+    left: auto;
+    font-size: 15vw;
+    text-align: center;
+    margin-bottom: 20px;
+    white-space: normal; /* Permite quebra de linha */
+  }
+
+  .main-description {
+    position: relative;
+    top: auto;
+    left: auto;
+    max-width: 90%;
+    text-align: center;
+    margin: 0 auto 20px auto;
+    font-size: 0.9rem;
+  }
+
+  .central-image-wrapper {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 70vw;
+    height: 90vw;
+    max-width: 350px;
+    max-height: 450px;
+    margin-bottom: 30px;
+  }
+
+  .right-section {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto; /* Reset para fluxo normal */
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .right-image-container {
+    width: 40vw;
+    height: 40vw;
+    max-width: 180px;
+    max-height: 180px;
+  }
+  .right-text {
+    font-size: 1rem;
+    text-align: center;
+    max-width: 80%;
+  }
+
+  .bottom-text-right {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+    max-width: 90%;
+    text-align: center;
+    margin: 15px auto;
+    font-size: 0.9rem;
+  }
+
+  .circular-text {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin: 20px auto;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links a {
+    margin: 5px 8px;
+    font-size: 0.75rem;
+  }
+  .contact-button a {
+    padding: 6px 15px;
+    font-size: 0.75rem;
+  }
+  .main-title {
+    font-size: 18vw;
+  }
+  .central-image-wrapper {
+    width: 85vw;
+    height: 100vw;
+  }
+
+  .bottom-text-left,
+  .bottom-text-right {
+    font-size: 0.8rem;
+  }
+}
