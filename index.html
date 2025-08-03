@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Van Gogh: A Alma da Cor</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page-wrapper">
+    <header class="header">
+      <div class="menu-icon" id="menuIcon">
+        <div class="hamburger">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+      <div class="logo">VAN GOGH</div>
+      <div class="search-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="hero-text-section">
+        <div class="large-decorative-text">ARTE</div>
+        <h1>A Noite Estrelada</h1>
+        <p class="subtitle">A alma de Van Gogh em cada pincelada.</p>
+
+        <div class="details-grid">
+          <div class="detail-item">
+            <span class="detail-label">PINTOR</span>
+            <span class="detail-value">Vincent Van Gogh</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">DATA</span>
+            <span class="detail-value">Junho de 1889</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">LOCAL</span>
+            <span class="detail-value">Saint-Rémy-de-Provence</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image-section">
+        <img src="https://images2.alphacoders.com/839/83960.jpg" alt="A Noite Estrelada de Van Gogh" class="main-artwork-image">
+        <div class="thumbnail-stack">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Vincent_Willem_van_Gogh_128.jpg" alt="Miniatura Girassóis">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Vincent_Willem_van_Gogh_-_Cafe_Terrace_at_Night_%28Yorck%29.jpg" alt="Miniatura Terraço do Café">
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer-nav">
+      <div class="nav-item active">
+        <span class="nav-number">01</span>
+        <span class="nav-title">Introdução</span>
+      </div>
+      <div class="nav-item">
+        <span class="nav-number">02</span>
+        <span class="nav-title">Biografia</span>
+      </div>
+      <div class="nav-item">
+        <span class="nav-number">03</span>
+        <span class="nav-title">Obras</span>
+      </div>
+      <div class="nav-item">
+        <span class="nav-number">04</span>
+        <span class="nav-title">Legado</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Full-screen Modal for About Author -->
+  <div class="full-screen-modal" id="aboutAuthorModal">
+    <button class="modal-close-btn" id="modalCloseBtn">&times;</button>
+    <div class="modal-content-wrapper">
+      <div class="modal-header">
+        <h2>Sobre Vincent Van Gogh</h2>
+      </div>
+      <div class="modal-body">
+        <p>Vincent Willem van Gogh (Groot Zundert, 30 de março de 1853 — Auvers-sur-Oise, 29 de julho de 1890) foi um pintor pós-impressionista holandês. Considerado uma das figuras mais influentes na história da arte ocidental, suas obras são caracterizadas por cores vibrantes, pinceladas expressivas e temas que retratam a vida rural, paisagens e autorretratos.</p>
+        <p>Apesar de sua imensa produção artística, Van Gogh só vendeu uma pintura durante sua vida e lutou contra doenças mentais, o que o levou a um período de internação em asilos. Sua arte, no entanto, ganhou reconhecimento póstumo e hoje é celebrada mundialmente por sua intensidade emocional e inovação.</p>
+        <p>Entre suas obras mais famosas estão "A Noite Estrelada", "Os Girassóis", "Comedores de Batata" e vários autorretratos que oferecem um vislumbre profundo de sua alma atormentada e genialidade.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
