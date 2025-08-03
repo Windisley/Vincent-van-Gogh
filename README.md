@@ -23,7 +23,7 @@ This project is a single-page website dedicated to Vincent van Gogh, a Dutch pos
 - Fonts: Roboto and Playfair Display (loaded via Google Fonts in index.html).
 - No external JavaScript libraries required.
 
-
+Responsiveness not available for smartphones.
 ---------------------------------------------------------------------
 
 
@@ -53,6 +53,8 @@ Este projeto é um site de página única dedicado a Vincent van Gogh, um pintor
 ## Dependências
 - Fontes: Roboto e Playfair Display (carregadas via Google Fonts no index.html).
 - Não são necessárias bibliotecas JavaScript externas.
+
+Responsividade não disponível para smartphones
 
 ![Captura de Tela do Site do Vincent van Gogh](/img/page.png)
 
