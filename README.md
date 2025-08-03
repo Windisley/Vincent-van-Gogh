@@ -24,6 +24,8 @@ This project is a single-page website dedicated to Vincent van Gogh, a Dutch pos
 - No external JavaScript libraries required.
 
 Responsiveness not available for smartphones.
+
+
 ---------------------------------------------------------------------
 
 
