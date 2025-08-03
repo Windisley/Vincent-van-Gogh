@@ -3,9 +3,6 @@
 ## Overview
 This project is a single-page website dedicated to Vincent van Gogh, a Dutch post-impressionist painter. The site showcases his biography, artistic style, and legacy, with a responsive design and modern aesthetic.
 
-## Screenshot
-The image below displays a preview of the site:
-
 ## Files
 - **index.html**: The main HTML file that contains the site structure, including navigation, main content, and footer.
 - **style.css**: The CSS file that defines the site's style, including layout, typography, colors, and responsive design.
@@ -35,8 +32,6 @@ The image below displays a preview of the site:
 ## Visão Geral
 Este projeto é um site de página única dedicado a Vincent van Gogh, um pintor pós-impressionista holandês. O site apresenta sua biografia, estilo artístico e legado, com um design responsivo e estética moderna.
 
-## Captura de Tela
-A imagem abaixo exibe uma visualização do site:
 
 ## Arquivos
 - **index.html**: O arquivo HTML principal que contém a estrutura do site, incluindo navegação, conteúdo principal e rodapé.
