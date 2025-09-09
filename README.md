@@ -1,4 +1,4 @@
-# Vincent van Gogh Website
+# Vincent van Gogh Website Responsivo
 
 ## Overview
 This project is a single-page website dedicated to Vincent van Gogh, a Dutch post-impressionist painter. The site showcases his biography, artistic style, and legacy, with a responsive design and modern aesthetic.
@@ -56,7 +56,7 @@ Este projeto é um site de página única dedicado a Vincent van Gogh, um pintor
 - Fontes: Roboto e Playfair Display (carregadas via Google Fonts no index.html).
 - Não são necessárias bibliotecas JavaScript externas.
 
-Responsividade não disponível para smartphones
+### Responsividade disponível para smartphones
 
 ![Captura de Tela do Site do Vincent van Gogh](/img/page.png)
 
