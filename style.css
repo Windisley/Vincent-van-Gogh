@@ -23,7 +23,6 @@ body {
   color: var(--color-text-light);
   background-color: var(--color-dark-blue);
   position: relative;
-  overflow: hidden;
 }
 
 
@@ -47,7 +46,6 @@ body {
   align-items: center;
   margin: 0 auto;
   z-index: 5;
-  
  }
 
  .header .header-mobile{
@@ -110,7 +108,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 /* Wrapper para título + descrição + imagem */
@@ -148,8 +148,7 @@ body {
 
 .main-description {
   margin-top: 50px;
-  margin-right: 150px; 
-  max-width: 1440px;
+  max-width: 720px;
   font-size: 0.9rem;
   line-height: 1.5;
   color: var(--color-text-light);
@@ -159,14 +158,13 @@ body {
 /* Imagem */
 .central-image-wrapper {
   width: 100%;
-  max-width: 600px;
-  height: auto;
-  aspect-ratio: 3 / 4; 
+  max-width: 400px;
+  height: 100%;
   overflow: hidden;
   z-index: 1;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   position: relative;
   object-fit: cover;
   object-position: center center;
