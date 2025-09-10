@@ -80,6 +80,43 @@ body::before {
   /*  Here */
  }
 
+ .box-button-menu{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  right: .6%;
+  top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--color-dark-blue);
+  cursor: pointer;
+ }
+
+ .box-button-menu .button-left{
+   width: 75%;
+   height: 4px;
+   background-color: var(--color-text-light);
+   margin-bottom: 3px;
+ }
+
+ .box-button-menu .button-center{
+  width: 75%;
+  height: 4px;
+  background-color: var(--color-text-light);
+
+}
+
+.box-button-menu .button-right{
+  width: 75%;
+  height: 4px;
+  background-color: var(--color-text-light);
+  margin-top: 3px;
+
+}
+
   .header .header-mobile .nav-links{
     width: 100%;
     height: 100%;
