@@ -1,3 +1,31 @@
-@media (max-width:845px) {
-   
+:root {
+    --color-dark-blue: #1a1a40;
+    --color-accent-yellow: #ffd700;
+    --color-text-light: #e0e0e0;
+    --gradient-start: #1a1a40;
+    --gradient-end: #1a1a40;
+  }
+
+@media (max-width:900px) {
+    
+    .header-mobile{
+        right: 0;
+        top: 0;
+        height: 100dvh;
+        background-color: var(--color-text-light);
+    }
+    .header-mobile .nav-links{
+    flex-direction: column;
+    align-items: center;
+   }
+
+   .header-mobile .nav-links a{
+    color: var(--color-dark-blue);
+    
+   }
+
+   .header .header-mobile .nav-links .contact-button a{
+    background-color: #1a1a40;
+    
+   }
 }
