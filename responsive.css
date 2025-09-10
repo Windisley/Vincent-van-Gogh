@@ -42,12 +42,33 @@
          height: 4px;
          background-color: var(--color-text-light);
          margin-bottom: 3px;
+         transition: .5s ease-in-out;
+         pointer-events: visible;
        }
+
+       .box-button-menu .button-left-on{
+        width: 75%;
+        height: 4px;
+        background-color: var(--color-text-light);
+        margin-bottom: 3px;
+        transition: .5s ease-in-out;
+        display: none;
+        pointer-events: none;
+        margin-bottom: -3px;
+
+      }
       
        .box-button-menu .button-center{
         width: 75%;
         height: 4px;
         background-color: var(--color-text-light);
+        transition: .3s ease-in-out;
+        pointer-events: visible;
+      }
+
+      .box-button-menu .button-center-on{
+        pointer-events: visible;
+        transform: rotate(45deg);
       
       }
       
@@ -56,7 +77,20 @@
         height: 4px;
         background-color: var(--color-text-light);
         margin-top: 3px;
+        transition: .3s ease-in-out;
+        pointer-events: visible;
       
+      }
+
+      .box-button-menu .button-right-on{
+        width: 75%;
+        height: 4px;
+        background-color: var(--color-text-light);
+        margin-top: 3px;
+        transition: .3s ease-in-out;
+        pointer-events: visible;
+        transform: rotate(-45deg);
+        margin-top: -3px;
       }
       
 
