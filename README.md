@@ -58,5 +58,16 @@ Este projeto é um site de página única dedicado a Vincent van Gogh, um pintor
 
 ### Responsividade disponível para smartphones
 
-![Captura de Tela do Site do Vincent van Gogh](/img/page.png)
+### Com menu lateral 
+
+![menu_lateral](https://github.com/user-attachments/assets/8d0b8fe9-a5a5-41cc-ab4b-20c3402e4a24)
+
+------
+### Conteudo Centralizado ao centro
+
+![conteudo_centralizado](https://github.com/user-attachments/assets/e0d91267-aeb3-460e-bd8c-04912a4b4e48)
+
+------
+
+![page](https://github.com/user-attachments/assets/d1be4d29-c714-47bd-b053-efc40266d936)
 
